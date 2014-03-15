@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <div id="game" style="border: 1px dashed grey">
+      <form action="check-answer">
+        <input name="firstAddend" value="1"/>
+        +
+        <input name="secondAddend" value="7"/>
+        =
+        <input name="answer" type="text"/>
+        <input type="submit"/>
+      </form>
+    </div>
+  </body>
+</html>
