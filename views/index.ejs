@@ -6,11 +6,12 @@
   </head>
   <body>
     <h1><%= title %></h1>
+
     <div id="game" style="border: 1px dashed grey">
       <form action="check-answer">
-        <input name="firstAddend" value="1"/>
+        <input name="firstAddend" value="<%= firstAddend %>"/>
         +
-        <input name="secondAddend" value="7"/>
+        <input name="secondAddend" value="<%= secondAddend %>"/>
         =
         <input name="answer" type="text"/>
         <input type="submit"/>

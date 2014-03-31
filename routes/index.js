@@ -1,39 +1,11 @@
-/* exports.init = function(app) {
-  app.get('/',
-    bigBrother , // middelware chain
-    requireACL("admin"),
-    littleSister,
-    index
-  );
-}
-
-requireACL = function(acl) {
-  return function(req, res, next) {
-    console.log(acl, req.query.acl)
-    if (req.query.acl != acl) {
-      res.send("Not Allowed")
-    }
-    next()
-  }
-}
-bigBrother = function(req, res, next) {
-  console.log("I am watching you");
-  next()
-}
-
-littleSister = function(req, res, next) {
-  console.log("I am following you")
-  next()
-}
-*/
-
 exports.init = function(app) {
   app.get('/', index
   );
   app.get('/check-answer', checkAnswer)
 }
+
 index = function(req, res){
-  res.render('index', { title: 'Livy\'s App', name: 'Livy Lu Li Bu' });
+  res.render('index', { title: 'Livy\'s App', name: 'Livy Lu Li Bu', firstAddend: Math.round(Math.random() * 10) , secondAddend: Math.round(Math.random() * 10)});
 };
 
 checkAnswer = function(req, res){
