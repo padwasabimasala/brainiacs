@@ -6,9 +6,9 @@
   </head>
   <body>
     <h1><%= title %></h1>
-
-    <div id="game" style="border: 1px dashed grey">
-      <form action="check-answer">
+    <p class="<%= right_wrong %>"><%= message %></p>
+    <div id="game">
+      <form action="/">
         <input name="firstAddend" value="<%= firstAddend %>"/>
         +
         <input name="secondAddend" value="<%= secondAddend %>"/>
