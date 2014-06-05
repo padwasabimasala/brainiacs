@@ -4,18 +4,30 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body>
+  <body class="<%= right_wrong %>">
     <h1><%= title %></h1>
-    <p class="<%= right_wrong %>"><%= message %></p>
-    <div id="game">
+    <h2>Score</h2>
+    <ul>
+    <%= done %>
+    	<li>Right: <%= number_right%></li>
+    	<li>Wrong: <%= number_wrong%></li>
+    </ul>
+    <div id="game" class="<%= right_wrong %>">
       <form action="/">
         <input name="firstAddend" value="<%= firstAddend %>"/>
         +
         <input name="secondAddend" value="<%= secondAddend %>"/>
         =
-        <input name="answer" type="text"/>
+        <input name="answer" type="text" id="answerBox"/>
         <input type="submit"/>
       </form>
+	  <form action="/">
+        <input type="submit" name="newGame" value="New Game"/>
+      </form>
+
     </div>
   </body>
+  <script>
+    document.getElementById('answerBox').focus()
+  </script>
 </html>

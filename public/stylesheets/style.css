@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 16pt "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -8,7 +8,7 @@ a {
 }
 
 #game {
-  border: 1px dashed grey
+ padding: 1em;
 }
 
 .message {
@@ -16,5 +16,11 @@ a {
 }
 
 .right {
-  border: 1px solid green
+  border: 10px solid green;
+  background-color: green;
+}
+
+.wrong {
+  border: 10px solid red;
+  background-color: red;
 }
